@@ -8,7 +8,7 @@ ARG plugins="git,filemanager,cors,realip,expires,cache"
 
 # process wrapper
 RUN go get -v github.com/abiosoft/parent
-COPY build/builder.sh /usr/bin/builder.sh
+COPY builder/builder.sh /usr/bin/builder.sh
 RUN VERSION=${version} PLUGINS=${plugins} /bin/sh /usr/bin/builder.sh
 
 #
