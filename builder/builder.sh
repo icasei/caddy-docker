@@ -40,7 +40,7 @@ for plugin in $(echo $PLUGINS | tr "," " "); do \
     done
 
 # builder dependency
-git clone https://github.com/caddyserver/builds /go/src/github.com/caddyserver/builds
+git clone https://github.com/icasei/builds /go/src/github.com/icasei/builds
 
 # build
 cd /go/src/github.com/icasei/caddy/caddy \
