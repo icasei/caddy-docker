@@ -23,7 +23,10 @@ LABEL caddy_version="$version"
 # Let's Encrypt Agreement
 ENV ACME_AGREE="false"
 
-RUN apk add --no-cache openssh-client git
+RUN apk add --no-cache openssh-client git tzdata
+
+RUN cp /usr/share/zoneinfo/Brazil/East /etc/localtime && \
+    echo "Brazil/East" >  /etc/timezone
 
 # install caddy
 COPY --from=builder /install/caddy /usr/bin/caddy
