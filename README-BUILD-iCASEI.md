@@ -6,6 +6,6 @@ git push origin --tags
 ```bash
 docker build --build-arg \
    plugins=proxyprotocol,pdns \
-   -t docker.icasei.com.br/caddy:1.4 \
+   -t docker.icasei.com.br/caddy:1.5 \
    github.com/icasei/caddy-docker.git --no-cache
 ```
